@@ -2,10 +2,10 @@
 use soroban_sdk::{contract, contractimpl, Env, Symbol};
 
 #[contract]
-pub struct StarterContract;
+pub struct SorobanData;
 
 #[contractimpl]
-impl StarterContract {
+impl SorobanData {
     pub fn set(env: &Env, key: Symbol, value: Symbol) {
         env.storage().persistent().set(&key, &value);
         env.storage().instance().set(&key, &value);
